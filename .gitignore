@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Mac system files
+.DS_Store
+
 # C extensions
 *.so
 
@@ -127,3 +130,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Large files, scan with: find * -size +50M | cat >> .gitignore
+Kaggle/Home_Credit_Default_Risk/data/POS_CASH_balance.csv
+Kaggle/Home_Credit_Default_Risk/data/credit_card_balance.csv
+Kaggle/Home_Credit_Default_Risk/data/installments_payments.csv
+Kaggle/Home_Credit_Default_Risk/data/application_train.csv
+Kaggle/Home_Credit_Default_Risk/data/bureau.csv
+Kaggle/Home_Credit_Default_Risk/data/previous_application.csv
+Kaggle/Home_Credit_Default_Risk/data/bureau_balance.csv
+Kaggle/Home_Credit_Default_Risk/data/HomeCredit_columns_description.csv
+Kaggle/Home_Credit_Default_Risk/submit_file.csv
+Kaggle/Home_Credit_Default_Risk/data/application_test_student.csv
+Kaggle/Home_Credit_Default_Risk/data/sample_submission.csv
+

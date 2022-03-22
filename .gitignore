@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # Mac system files
-.DS_Store
+*.DS_Store
 
 # C extensions
 *.so
@@ -143,4 +143,3 @@ Kaggle/Home_Credit_Default_Risk/data/HomeCredit_columns_description.csv
 Kaggle/Home_Credit_Default_Risk/submit_file.csv
 Kaggle/Home_Credit_Default_Risk/data/application_test_student.csv
 Kaggle/Home_Credit_Default_Risk/data/sample_submission.csv
-

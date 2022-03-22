@@ -1,21 +1,47 @@
-from IPython.core.display import display
-import pickle
+# Aesthetics and utils
+import os
+from IPython.core.display import display, HTML
+
+# Data maniputalion
+from datetime import datetime
 import re
 import numpy as np
 import pandas as pd
-import sklearn
+
+# Pandas config
+pd.set_option('display.float_format', lambda x: '%.2f' % x) # supress scientific notation
+pd.set_option('display.max_columns', 100)                   # increase max columns displayed
+
+# Saving binary files
+import pickle
+
+# Data visualization
 import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns; sns.set()
-from biokit.viz import corrplot
+import plotly.express as px
+import plotly.graph_objects as go
 
-# terminal colors
+# Machine Learning
+import sklearn
+
+# Disable warnings - useless most of the time
+import warnings
+warnings.filterwarnings('ignore')
+
+# Terminal colors
 WHITE = '\033[39m'
 CYAN = '\033[36m'
 GREEN = '\033[32m'
 RED = '\033[31m'
 
-# color pallete
+# Markdown styling
+# header 1 - yellow 
+# <span style='font-family:Lato,sans-serif;color:#fdbf11;font-size: 1em;'>
+# header 2 - blue #46abdb
+# <span style='font-family:Lato,sans-serif;color:#1696d2;font-size: 1em;'>
+
+# Color pallete for plotting
 colors = {
     'cyan': '#1696d2',
     'gray': '#5c5859',
@@ -27,54 +53,10 @@ colors = {
     'red': '#a4201d'
 }
 
-# disable warnings
-import warnings
-warnings.filterwarnings('ignore')
-
-# pandas config
-pd.set_option('display.float_format', lambda x: '%.2f' % x)
-
-# libraries version
+# Check Libraries version
 print(f'Numpy: {np.__version__}')
 print(f'Pandas: {pd.__version__}')
 print(f'Sklearn: {sklearn.__version__}')
 print(f'Matplotlib: {matplotlib.__version__}')
 print(f'Seaborn: {sns.__version__}')
-
-
-def display_na(df):
-    plt.figure(figsize=(10,8))
-    sns.displot(
-        data=df.loc[:, df.isna().any()].isna().melt(value_name="missing"),
-        y="variable",
-        hue="missing",
-        multiple="fill",
-        aspect=3,
-        palette='crest'
-    )
-    plt.title('Bar plot showing Non-Missing Values', weight='bold', fontsize = 18, pad=20, loc='left')
-    plt.xlabel(" ")
-    plt.ylabel(" ")
-    plt.xticks(size=12, weight = 'bold')
-    plt.yticks(size=12, weight = 'bold');
-
-    plt.figure(figsize=(18,8))
-    sns.heatmap(df.loc[:, df.isna().any()].isna().transpose(),
-                cmap="GnBu",
-                cbar_kws={'label': 'Missing Data'})
-    plt.title('Heatmap showing Missing Values', weight='bold', fontsize=18, pad=20, loc='left')
-    plt.xticks(size=12)
-    plt.yticks(size=12)
-    plt.show();
-
-
-
-from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
-def display_metrics(X_train, X_test, y_train, y_test, estimator):
-
-    print('Train metrics:')
-    for metric in [r2_score, mean_absolute_error, mean_squared_error]:
-        print(f'{CYAN}{metric.__name__}{WHITE}: {metric(y_train, estimator.predict(X_train)):.2f}')
-    print('Test metrics:')
-    for metric in [r2_score, mean_absolute_error, mean_squared_error]:
-        print(f'{CYAN}{metric.__name__}{WHITE}: {metric(y_test, estimator.predict(X_test)):.2f}')
+datetime.now().strftime('Last run on %d/%m/%Y at %H:%M:%S')

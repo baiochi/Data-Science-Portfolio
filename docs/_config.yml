@@ -1,17 +1,3 @@
-<style>
-   ul {
-     list-style-type: none;
-   }
-   ul li:before {
-     content: '\2014';
-     position: absolute;
-     margin-left: -20px;
-   }
-   img[alt~="Logo"] {
-     border-radius: 50%;
-   }
-</style>
-
 title: João Baiochi
 logo: "/images/selfie_logo.png?raw=True"
 description: >

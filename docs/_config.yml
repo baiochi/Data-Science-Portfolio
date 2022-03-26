@@ -1,16 +1,32 @@
+<style>
+   ul {
+     list-style-type: none;
+   }
+   ul li:before {
+     content: '\2014';
+     position: absolute;
+     margin-left: -20px;
+   }
+   img[alt~="Logo"] {
+     border-radius: 50%;
+   }
+</style>
+
 title: João Baiochi
 logo: "/images/selfie_logo.png?raw=True"
 description: >
-    *Passionate about teaching, exploring data, finding insights and communicating through meaningful visualizations.*  
+    <i>Passionate about teaching, exploring data, finding insights and communicating through meaningful visualizations.</i>  
     <br><br> 
-    **Skills**  
-    - Python   
-    - Machine Learning 
-    - Data Visualization  
-    - PostgreSQL  
-    - R  
-    - WebScraping  
+    <b>Skills</b>  
+    <ul>
+    <li>Python</li>
+    <li>Machine Learning </li>
+    <li>Data Visualization  </li>
+    <li>PostgreSQL  </li>
+    <li>R  </li>
+    <li>WebScraping </li>
+    </ul>
     <br><br>
-    [Linkedin Profile](https://www.linkedin.com/in/joaobaiochi/)
+    <a href="https://www.linkedin.com/in/joaobaiochi/">Linkedin Profile</a>
 
 theme: jekyll-theme-minimal

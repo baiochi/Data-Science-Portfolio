@@ -1,0 +1,32 @@
+<style>
+
+.main_title {
+    font-family:Lato,sans-serif;
+    color:#f5b324;
+    font-size: 3em;
+}
+
+hr {
+  background: linear-gradient(to right, #00fafd, #f5b324);
+  height: 2px;
+}
+
+h1 {
+    font-family:Lato,sans-serif;
+    color:#f5b324;
+    font-style: bold;
+    font-size: 1em;
+}
+
+h2 {
+    font-family:Lato,sans-serif;
+    color:#07bbf7;
+    font-size: 1em;
+}
+
+.author {
+    font-family:Lato,sans-serif;
+    font-style: italic;
+    font-size: 1em;
+}
+</style>

@@ -1,0 +1,15 @@
+aiortc==1.3.1
+opencv-python-headless==4.5.5.64
+streamlit==1.8.1
+streamlit_webrtc==0.36.1
+typing_extensions==4.1.1
+matplotlib
+seaborn
+numpy
+pandas
+Pillow
+mediapipe
+scipy
+fastdtw
+tqdm
+pickle5
